@@ -16,7 +16,7 @@ public class Score {
 	public Score() {
 	}
 	
-	public void setMovieMovie(Movie movie) {
+	public void setMovie(Movie movie) {
 		id.setMovie(movie);
 	}
 	
