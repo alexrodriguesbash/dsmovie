@@ -21,7 +21,7 @@ function FormCard ( {movieId}: Props ) {
             .then(response => {
                 setMovie(response.data); 
             }); 
-    })
+    },[movieId]);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         
@@ -29,6 +29,8 @@ function FormCard ( {movieId}: Props ) {
 
         const email =  (event.target as any).email.value ;
         const score =  (event.target as any).score.value ;
+
+        console.log(email, score); 
 
         if (!validateEmail(email)){
             return; 
